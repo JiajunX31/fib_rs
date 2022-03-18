@@ -4,7 +4,6 @@ mod fib_calcs;
 use fib_calcs::fib_num::__pyo3_get_function_fibonacci_number;
 use fib_calcs::fib_nums::__pyo3_get_function_fibonacci_numbers;
 
-pub mod fib_nums;
 
 #[pyfunction]
 fn say_hello() {
