@@ -3,10 +3,8 @@ use pyo3::wrap_pyfunction;
 
 mod fib_calcs;
 
-use fib_calcs::fib_number::__pyo3_get_function_fibonacci_number;
-use fib_calcs::fib_numbers::__pyo3_get_function_fibonacci_numbers;
-pub mod fib_numbers;
-
+use fib_calcs::fib_num::fibonacci_number;
+use fib_calcs::fib_nums::fibonacci_numbers;
 
 
 #[pyfunction]
