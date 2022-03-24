@@ -1,5 +1,5 @@
 import argparse
-from fib_rs import fibonacci_number
+import fib_rs
 
 def fib_num_cli() -> None:
     parser = argparse.ArgumentParser(description="Calculate Fibonacci numbers")
@@ -11,4 +11,4 @@ def fib_num_cli() -> None:
         help="Fibonacci number to be calculated",
     )
     args = parser.parse_args()
-    print(f"Your fibonacci number is: {fibonacci_number(n=args.number)}")
+    print(f"Your fibonacci number is: {fib_rs.fibonacci_number(n=args.number)}")
