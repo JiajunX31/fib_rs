@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from importlib.metadata import entry_points
 from setuptools import dist
 
 dist.Distribution().fetch_build_eggs(["setuptools_rust"])
@@ -7,7 +8,7 @@ from setuptools_rust import Binding, RustExtension
 
 setup(
     name="fib-rs",
-    version="0.1",
+    version="0.1.1",
     rust_extensions=[
         RustExtension(".fib_rs.fib_rs", path="Cargo.toml", binding=Binding.PyO3)
     ],
@@ -22,4 +23,9 @@ setup(
         "Operating System :: MacOS :: MacOS X",
     ],
     zip_safe=False,
+    entry_points={
+        "console_scripts": [
+            "fib-number = fib_rs.fib_num_cli:fib_num_cli",
+        ]
+    },
 )
